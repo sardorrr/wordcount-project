@@ -1,0 +1,14 @@
+<h1>There are {{ countnumber }} words in your text</h1>
+
+<h2>Your text:</h2>
+{{ fulltext }}
+
+<h2>Word count:</h2>
+
+{% for word, count in sortedlist %}
+{{ word }} - {{ count }}
+<br>
+{% endfor %}
+
+<br>
+<a href="{% url 'about' %}">About the author</a>
